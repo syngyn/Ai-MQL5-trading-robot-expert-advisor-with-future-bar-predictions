@@ -1,0 +1,6 @@
+@echo off
+echo Starting LSTM Model Training...
+echo Make sure EURUSD60.csv is in this directory!
+echo This may take several minutes...
+python train_model.py
+pause
