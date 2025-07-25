@@ -1,0 +1,100 @@
+LSTM Trading System - Installation Guide
+==========================================
+
+🚀 QUICK START (5 minutes):
+
+1. Extract all files to a folder (e.g., C:\LSTM_Trading)
+2. Double-click install.bat
+3. Copy your EURUSD60.csv file to the main folder
+4. Double-click train_model.bat (wait 5-15 minutes)
+5. Double-click start_daemon.bat
+6. Run your MT5 EA
+
+✅ DETAILED STEPS:
+
+STEP 1: System Requirements
+- Windows 10/11
+- Python 3.8+ (will be checked by installer)
+- 4GB+ free disk space
+- 8GB+ RAM recommended
+
+STEP 2: Install Python (if needed)
+- Download from https://python.org
+- IMPORTANT: Check "Add Python to PATH" during installation
+- Restart computer after installation
+
+STEP 3: Extract Package
+- Extract all files to a permanent location
+- Avoid spaces in folder path if possible
+- Example: C:\LSTM_Trading\
+
+STEP 4: Run Installer
+- Double-click install.bat
+- Wait for all packages to install
+- If errors occur, check Python installation
+
+STEP 5: Prepare Data
+- Your CSV must be named exactly: EURUSD60.csv
+- Required columns: DATE, TIME, OPEN, HIGH, LOW, CLOSE, TICKVOL, VOL, SPREAD
+- Minimum 1000 rows, 10000+ recommended
+- Place in main directory (not in subdirectories)
+
+STEP 6: Train Model
+- Double-click train_model.bat
+- Training will take 5-30 minutes depending on data size
+- You'll see progress updates every 5 epochs
+- Success message: "Training completed successfully!"
+- Files created: models/lstm_model_regression.pth, models/scaler.pkl
+
+STEP 7: Start Daemon
+- Double-click start_daemon.bat
+- Should see: "✅ Model and scaler loaded successfully"
+- Leave this window open while trading
+- You'll see prediction requests from MT5
+
+STEP 8: Connect MT5 EA
+- Copy GGTH4_hardened.mq5 to MT5 Experts folder
+- Attach EA to EURUSD H1 chart
+- Check EA settings match your system
+- Should see GUI panel with predictions
+
+🔧 TROUBLESHOOTING:
+
+Problem: "Python is not recognized"
+Solution: Reinstall Python, check "Add to PATH"
+
+Problem: "pip install failed"
+Solution: Run as Administrator, check internet connection
+
+Problem: "EURUSD60.csv not found"
+Solution: Check exact filename, must be in main directory
+
+Problem: "Model training failed"
+Solution: Check data format, ensure enough RAM available
+
+Problem: "Daemon won't start"
+Solution: Train model first, check file permissions
+
+Problem: "MT5 EA shows 'Not Connected'"
+Solution: Check daemon is running, verify file paths
+
+Problem: "No predictions displayed"
+Solution: Check data folder permissions, restart daemon
+
+📞 SUPPORT:
+
+If installation fails:
+1. Check Python version: python --version
+2. Check pip works: pip --version  
+3. Try manual install: pip install torch numpy pandas scikit-learn
+4. Contact: Jason.W.Rusk@gmail.com
+
+🎯 NEXT STEPS AFTER SUCCESSFUL INSTALLATION:
+
+1. Monitor training accuracy (aim for >60%)
+2. Verify daemon receives requests from MT5
+3. Paper trade for 1-2 weeks minimum
+4. Gradually increase position sizes
+5. Keep training data updated monthly
+
+Remember: This is experimental software. Always test thoroughly!
