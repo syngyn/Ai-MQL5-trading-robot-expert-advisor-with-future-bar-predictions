@@ -53,7 +53,7 @@ STEP 7: Start Daemon
 - You'll see prediction requests from MT5
 
 STEP 8: Connect MT5 EA
-- Copy GGTH4_hardened.mq5 to MT5 Experts folder
+- Copy GGTH.mq5 to MT5 Experts folder
 - Attach EA to EURUSD H1 chart
 - Check EA settings match your system
 - Should see GUI panel with predictions
